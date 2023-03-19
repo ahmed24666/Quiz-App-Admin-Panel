@@ -1,0 +1,123 @@
+.login {
+  height: 100vh;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 50%;
+    border-radius: 10px;
+    min-height: 500px;
+    overflow: hidden;
+    padding: 30px;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    @media (max-width:767px) {
+        width: 90%;
+        padding: 0;
+    }
+    h1 {
+      color: var(--main-color);
+      font-size: 30px;
+      text-align: center;
+      font-weight: 600;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      label {
+        font-size: 15px;
+        color: var(--main-color);
+        font-weight: 600;
+        text-align: start;
+      }
+      input {
+        border: none;
+        padding: 15px 10px;
+        background-color: #e6e6e6;
+        border-radius: 10px;
+        width: 300px;
+        @media (max-width:400px) {
+            width: 220px;
+        }
+      }
+      input:focus {
+        outline: none;
+        caret-color: var(--main-color);
+        color: black;
+      }
+    }
+    button {
+      width: 50%;
+      padding: 10px;
+      border: 2px solid var(--main-color);
+      background-color: var(--main-color);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.5s;
+      border-radius: 10px;
+    }
+    button:hover {
+      border: 2px solid var(--main-color);
+      background-color: white;
+      color: var(--main-color);
+    }
+    .regester-div {
+      text-align: center;
+      p {
+        color: lightblue;
+        font-size: 13px;
+      }
+      span {
+        color: var(--main-color);
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .login {
+    .card {
+      width: 90%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .login {
+    .card {
+      .right {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        form {
+          gap: 20px;
+          label {
+            text-align: start;
+          }
+          input {
+            width: 200px;
+          }
+        }
+        button {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
